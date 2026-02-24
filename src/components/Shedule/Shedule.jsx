@@ -4,7 +4,7 @@ import TimeSelection from "../TimeSelection/TimeSelection";
 import FormDetails from "../FormDetails/FormDetails";
 export default function Shedule() {
   return (
-    <div className="bg-[#0f172a] border border-[rgba(253,252,252,0.25)] rounded-2xl w-[700px]">
+    <div className="bg-[#17121d] border border-[rgba(253,252,252,0.25)] rounded-2xl w-[700px]">
       <Head />
       <Calendar />
       <TimeSelection />
