@@ -3,8 +3,8 @@ import TimeZoneComponent from "../TimeZoneComponent/TimeZoneComponent";
 
 export default function Calendar() {
   return (
-    <div className="flex flex-col items-center justify-start gap-8 border-t border-white/25 p-7 w-[700px]">
-      <div className="flex flex-col items-start justify-start gap-6 w-[344px]">
+    <div className="flex flex-col items-center justify-start gap-8 border-t border-white/25 p-7 w-175">
+      <div className="flex flex-col items-start justify-start gap-6 w-86">
         <h4 className="font-primary font-semibold text-[20px] leading-[1.2] text-[#f4f1eb]">
           Select a Date & Time
         </h4>
