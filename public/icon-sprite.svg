@@ -1,26 +1,140 @@
-<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs>
-<symbol id="calendar" viewBox="0 0 32 32">
-<path fill="none" stroke="#fdfcfc80" style="stroke: var(--color1, #fdfcfc80)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.2" d="M9.6 1.6v6.4"></path>
-<path fill="none" stroke="#fdfcfc80" style="stroke: var(--color1, #fdfcfc80)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.2" d="M20.8 1.6v6.4"></path>
-<path fill="none" stroke="#fdfcfc80" style="stroke: var(--color1, #fdfcfc80)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.2" d="M25.778 4.8h-21.156c-1.669 0-3.022 1.274-3.022 2.844v19.911c0 1.571 1.353 2.844 3.022 2.844h21.156c1.669 0 3.022-1.273 3.022-2.844v-19.911c0-1.571-1.353-2.844-3.022-2.844z"></path>
-<path fill="none" stroke="#fdfcfc80" style="stroke: var(--color1, #fdfcfc80)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.2" d="M1.6 12.8h27.2"></path>
-</symbol>
-<symbol id="camera" viewBox="0 0 32 32">
-<path fill="none" stroke="#fdfcfc80" style="stroke: var(--color1, #fdfcfc80)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.2" d="M30.32 13.12c0-0.594-0.234-1.164-0.649-1.584s-0.979-0.656-1.567-0.656h-4.431l-3.323-4.48h-8.862l-3.323 4.48h-4.431c-0.588 0-1.151 0.236-1.567 0.656s-0.649 0.99-0.649 1.584v13.44c0 0.594 0.233 1.164 0.649 1.584s0.979 0.656 1.567 0.656h24.369c0.588 0 1.151-0.236 1.567-0.656s0.649-0.99 0.649-1.584v-13.44z"></path>
-<path fill="none" stroke="#fdfcfc80" style="stroke: var(--color1, #fdfcfc80)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.2" d="M15.92 24c2.651 0 4.8-2.149 4.8-4.8s-2.149-4.8-4.8-4.8c-2.651 0-4.8 2.149-4.8 4.8s2.149 4.8 4.8 4.8z"></path>
-</symbol>
-<symbol id="earth-TimeZone" viewBox="0 0 32 32">
-<path fill="none" stroke="#f4f1eb80" style="stroke: var(--color2, #f4f1eb80)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.2" d="M15.467 29.333c7.658 0 13.867-6.208 13.867-13.867s-6.208-13.867-13.867-13.867c-7.658 0-13.867 6.208-13.867 13.867s6.208 13.867 13.867 13.867z"></path>
-<path fill="none" stroke="#f4f1eb80" style="stroke: var(--color2, #f4f1eb80)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.2" d="M2.667 20.801h3.733c0.99 0 1.94-0.393 2.64-1.093s1.093-1.65 1.093-2.64v-3.2c0-0.99 0.393-1.94 1.093-2.64s1.65-1.093 2.64-1.093c0.99 0 1.94-0.393 2.64-1.093s1.093-1.65 1.093-2.64v-4.651"></path>
-<path fill="none" stroke="#f4f1eb80" style="stroke: var(--color2, #f4f1eb80)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.2" d="M29.333 15.253c-1.068-0.554-2.253-0.847-3.456-0.853h-4.544c-0.99 0-1.94 0.393-2.64 1.093s-1.093 1.65-1.093 2.64c0 0.99 0.393 1.94 1.093 2.64s1.65 1.093 2.64 1.093c0.707 0 1.386 0.281 1.886 0.781s0.781 1.178 0.781 1.886v1.856"></path>
-</symbol>
-<symbol id="clock" viewBox="0 0 32 32">
-<path fill="none" stroke="#fdfcfc80" style="stroke: var(--color1, #fdfcfc80)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.192" d="M1.6 16c0 3.819 1.517 7.482 4.218 10.182s6.363 4.218 10.182 4.218c3.819 0 7.482-1.517 10.182-4.218s4.218-6.363 4.218-10.182c0-3.819-1.517-7.482-4.218-10.182s-6.363-4.218-10.182-4.218c-3.819 0-7.482 1.517-10.182 4.218s-4.218 6.363-4.218 10.182z"></path>
-<path fill="none" stroke="#fdfcfc80" style="stroke: var(--color1, #fdfcfc80)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.192" d="M16 10.461v5.539l5.629 6.566"></path>
-</symbol>
-<symbol id="arrow" viewBox="0 0 19 32">
-<path d="M17.861 30.245c0.887-0.843 0.887-2.209 0-3.052l-12.376-11.755 12.376-11.755c0.887-0.843 0.887-2.209 0-3.052s-2.326-0.843-3.213 0l-13.982 13.28c-0.887 0.843-0.887 2.209 0 3.052l13.982 13.28c0.887 0.843 2.326 0.843 3.213 0z"></path>
-</symbol>
-</defs>
+<svg
+  aria-hidden="true"
+  style="position: absolute; width: 0; height: 0; overflow: hidden"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <defs>
+    <symbol id="calendar" viewBox="0 0 32 32">
+      <path
+        fill="none"
+        stroke="#fdfcfc80"
+        style="stroke: var(--color1, #fdfcfc80)"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="3.2"
+        d="M9.6 1.6v6.4"
+      ></path>
+      <path
+        fill="none"
+        stroke="#fdfcfc80"
+        style="stroke: var(--color1, #fdfcfc80)"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="3.2"
+        d="M20.8 1.6v6.4"
+      ></path>
+      <path
+        fill="none"
+        stroke="#fdfcfc80"
+        style="stroke: var(--color1, #fdfcfc80)"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="3.2"
+        d="M25.778 4.8h-21.156c-1.669 0-3.022 1.274-3.022 2.844v19.911c0 1.571 1.353 2.844 3.022 2.844h21.156c1.669 0 3.022-1.273 3.022-2.844v-19.911c0-1.571-1.353-2.844-3.022-2.844z"
+      ></path>
+      <path
+        fill="none"
+        stroke="#fdfcfc80"
+        style="stroke: var(--color1, #fdfcfc80)"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="3.2"
+        d="M1.6 12.8h27.2"
+      ></path>
+    </symbol>
+    <symbol id="camera" viewBox="0 0 32 32">
+      <path
+        fill="none"
+        stroke="#fdfcfc80"
+        style="stroke: var(--color1, #fdfcfc80)"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="3.2"
+        d="M30.32 13.12c0-0.594-0.234-1.164-0.649-1.584s-0.979-0.656-1.567-0.656h-4.431l-3.323-4.48h-8.862l-3.323 4.48h-4.431c-0.588 0-1.151 0.236-1.567 0.656s-0.649 0.99-0.649 1.584v13.44c0 0.594 0.233 1.164 0.649 1.584s0.979 0.656 1.567 0.656h24.369c0.588 0 1.151-0.236 1.567-0.656s0.649-0.99 0.649-1.584v-13.44z"
+      ></path>
+      <path
+        fill="none"
+        stroke="#fdfcfc80"
+        style="stroke: var(--color1, #fdfcfc80)"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="3.2"
+        d="M15.92 24c2.651 0 4.8-2.149 4.8-4.8s-2.149-4.8-4.8-4.8c-2.651 0-4.8 2.149-4.8 4.8s2.149 4.8 4.8 4.8z"
+      ></path>
+    </symbol>
+    <symbol id="earth-TimeZone" viewBox="0 0 32 32">
+      <path
+        fill="none"
+        stroke="#f4f1eb80"
+        style="stroke: var(--color2, #f4f1eb80)"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="3.2"
+        d="M15.467 29.333c7.658 0 13.867-6.208 13.867-13.867s-6.208-13.867-13.867-13.867c-7.658 0-13.867 6.208-13.867 13.867s6.208 13.867 13.867 13.867z"
+      ></path>
+      <path
+        fill="none"
+        stroke="#f4f1eb80"
+        style="stroke: var(--color2, #f4f1eb80)"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="3.2"
+        d="M2.667 20.801h3.733c0.99 0 1.94-0.393 2.64-1.093s1.093-1.65 1.093-2.64v-3.2c0-0.99 0.393-1.94 1.093-2.64s1.65-1.093 2.64-1.093c0.99 0 1.94-0.393 2.64-1.093s1.093-1.65 1.093-2.64v-4.651"
+      ></path>
+      <path
+        fill="none"
+        stroke="#f4f1eb80"
+        style="stroke: var(--color2, #f4f1eb80)"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="3.2"
+        d="M29.333 15.253c-1.068-0.554-2.253-0.847-3.456-0.853h-4.544c-0.99 0-1.94 0.393-2.64 1.093s-1.093 1.65-1.093 2.64c0 0.99 0.393 1.94 1.093 2.64s1.65 1.093 2.64 1.093c0.707 0 1.386 0.281 1.886 0.781s0.781 1.178 0.781 1.886v1.856"
+      ></path>
+    </symbol>
+    <symbol id="clock" viewBox="0 0 32 32">
+      <path
+        fill="none"
+        stroke="#fdfcfc80"
+        style="stroke: var(--color1, #fdfcfc80)"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="3.192"
+        d="M1.6 16c0 3.819 1.517 7.482 4.218 10.182s6.363 4.218 10.182 4.218c3.819 0 7.482-1.517 10.182-4.218s4.218-6.363 4.218-10.182c0-3.819-1.517-7.482-4.218-10.182s-6.363-4.218-10.182-4.218c-3.819 0-7.482 1.517-10.182 4.218s-4.218 6.363-4.218 10.182z"
+      ></path>
+      <path
+        fill="none"
+        stroke="#fdfcfc80"
+        style="stroke: var(--color1, #fdfcfc80)"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="3.192"
+        d="M16 10.461v5.539l5.629 6.566"
+      ></path>
+    </symbol>
+    <symbol id="arrow" viewBox="0 0 19 32">
+      <path
+        d="M17.861 30.245c0.887-0.843 0.887-2.209 0-3.052l-12.376-11.755 12.376-11.755c0.887-0.843 0.887-2.209 0-3.052s-2.326-0.843-3.213 0l-13.982 13.28c-0.887 0.843-0.887 2.209 0 3.052l13.982 13.28c0.887 0.843 2.326 0.843 3.213 0z"
+      ></path>
+      <symbol id="arrow-select" viewBox="0 0 64 32">
+        <path
+          fill="#f4f1eb"
+          style="fill: var(--color1, #f4f1eb)"
+          d="M31.92 28.373l31.92-28.373h-63.84l31.92 28.373z"
+        ></path>
+      </symbol>
+    </symbol>
+  </defs>
 </svg>

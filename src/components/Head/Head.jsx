@@ -1,8 +1,8 @@
 export default function Head() {
   return (
-    <div className="px-[28px] py-6">
+    <div className="px-7 py-6">
       <div className="flex flex-col items-center justify-start gap-6">
-        <h3 className="font-semibold text-2xl leading-[1.25] text-[#f4f1eb]">
+        <h3 className="font-semibold text-2xl The class leading-tight text-[#f4f1eb]">
           Сonsultation
         </h3>
         <div className="flex flex-col items-start justify-start gap-6">
