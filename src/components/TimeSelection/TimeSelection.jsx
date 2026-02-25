@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function TimeSelection() {
   const [selectedTime, setSelectedTime] = useState(null);
   console.log("🚀 ~ TimeSelection ~ selectedTime:", selectedTime);
-
+  const disableButton = !selectedTime;
   const selectOptions = [
     { label: "8:00", value: "8:00 - 8:30" },
     { label: "8:30", value: "8:30 - 9:00" },
@@ -56,6 +56,18 @@ export default function TimeSelection() {
           );
         })}
       </ul>
+      <button
+        disabled={disableButton}
+        type="button"
+        onClick={() => {
+          console.log("click");
+        }}
+        className="flex items-center justify-center flex-row gap-2 rounded-[100px] px-12 py-4 w-[244px] h-[56px] bg-[#e9ac32]
+      hover:bg-[#d18e1b] active:bg-[#a86415] active:shadow-[inset_5px_6px_4px_rgba(12,17,31,0.3)] transition-colors duration-200
+        font-inter font-medium text-lg leading-[1.55556] text-[#0c0614] disabled:bg-[#8f8c84] disabled:text-[#252422]"
+      >
+        Next
+      </button>
     </div>
   );
 }
