@@ -43,7 +43,9 @@ export default function TimeSelection() {
           return (
             <li
               key={opt.value}
-              onClick={() => setSelectedTime(opt)}
+              onClick={() =>
+                isSelected ? setSelectedTime(null) : setSelectedTime(opt)
+              }
               className={`
                 cursor-pointer border-2 border-[#fabf42] rounded-lg py-2 px-6 w-59 h-10 flex flex-col items-center justify-center gap-2.5
                 ${isSelected ? "bg-[#fabf42] text-[#0c0614]" : "bg-transparent text-[#d18e1b]"}
