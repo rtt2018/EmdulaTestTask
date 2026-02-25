@@ -20,7 +20,7 @@
 <path fill="none" stroke="#fdfcfc80" style="stroke: var(--color1, #fdfcfc80)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.192" d="M16 10.461v5.539l5.629 6.566"></path>
 </symbol>
 <symbol id="arrow" viewBox="0 0 19 32">
-<path fill="#fdfcfc80" style="fill: var(--color1, #fdfcfc80)" opacity="0.5" d="M17.861 30.245c0.887-0.843 0.887-2.209 0-3.052l-12.376-11.755 12.376-11.755c0.887-0.843 0.887-2.209 0-3.052s-2.326-0.843-3.213 0l-13.982 13.28c-0.887 0.843-0.887 2.209 0 3.052l13.982 13.28c0.887 0.843 2.326 0.843 3.213 0z"></path>
+<path d="M17.861 30.245c0.887-0.843 0.887-2.209 0-3.052l-12.376-11.755 12.376-11.755c0.887-0.843 0.887-2.209 0-3.052s-2.326-0.843-3.213 0l-13.982 13.28c-0.887 0.843-0.887 2.209 0 3.052l13.982 13.28c0.887 0.843 2.326 0.843 3.213 0z"></path>
 </symbol>
 </defs>
 </svg>
