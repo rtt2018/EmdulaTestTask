@@ -67,7 +67,6 @@ const customStyles = {
     fontWeight: 500,
     fontSize: "14px",
     lineHeight: 1.28571,
-    textAlign: "center",
     color: "#f4f1eb",
     backgroundColor: state.isFocused ? "#2d2d2d" : "transparent",
     cursor: "pointer",
