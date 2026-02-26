@@ -2,17 +2,24 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getTimePeriods } from "../../redux/time/selectors";
 import { setSelectedTimeAction } from "../../redux/time/slice";
+import { getSelectedDateSelector } from "../../redux/date/selectors";
 
 export default function TimeSelection() {
   const [selectedTime, setSelectedTime] = useState(null);
   const disableButton = !selectedTime;
   const selectOptions = useSelector(getTimePeriods);
   const dispatch = useDispatch();
+  const dateHead = useSelector(getSelectedDateSelector);
+  const formatted = new Date(dateHead).toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+  });
 
   return (
-    <div className="flex flex-col gap-6 p-2 h-132.5">
+    <div className="flex flex-col gap-6 p-2 h-132.5 border-l-[0.7px] border-l-[rgba(253,252,252,0.25)]">
       <div className="font-inter font-normal text-base leading-normal text-white/50">
-        Thuesday, February 12
+        {formatted}
       </div>
       <ul className="flex flex-col gap-2 w-61  overflow-y-auto scrollbar-hide">
         {selectOptions.map((opt) => {
