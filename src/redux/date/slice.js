@@ -14,7 +14,8 @@ export const dateSlice = createSlice({
         state.selectedDate = actions.payload;
         state.isDateSelected = true;
       } else {
-        state = initDateSlice;
+        state.selectedDate = null;
+        state.isDateSelected = false;
       }
     },
   },

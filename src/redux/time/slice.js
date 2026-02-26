@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-
 const initTimeSlice = {
   timeIntervals: [
     { label: "8:00", value: "8:00 - 8:30" },
@@ -29,20 +28,28 @@ const initTimeSlice = {
   ],
   selectedTime: null,
   isTimeSelected: false,
+  timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
 };
 
 export const timeSlice = createSlice({
   name: "time",
   initialState: initTimeSlice,
   reducers: {
-    setSelectedTime: (state, actions) => {
+    setSelectedTimeAction: (state, actions) => {
       if (actions.payload) {
         state.selectedTime = actions.payload;
+        state.isTimeSelected = true;
+      } else {
+        state.selectedTime = null;
+        state.isTimeSelected = false;
       }
+    },
+    setTimeZone: (state, actions) => {
+      state.timeZone = actions.payload;
     },
   },
 });
 
-export const { setSelectedTime } = timeSlice.actions;
+export const { setSelectedTimeAction, setTimeZone } = timeSlice.actions;
 
 export const timeSliceReducer = timeSlice.reducer;

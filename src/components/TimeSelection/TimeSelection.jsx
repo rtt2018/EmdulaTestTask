@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getTimePeriods } from "../../redux/time/selectors";
+import { setSelectedTimeAction } from "../../redux/time/slice";
 
 export default function TimeSelection() {
   const [selectedTime, setSelectedTime] = useState(null);
   const disableButton = !selectedTime;
   const selectOptions = useSelector(getTimePeriods);
+  const dispatch = useDispatch();
 
   return (
     <div className="flex flex-col gap-6 p-2 h-132.5">
@@ -15,13 +17,19 @@ export default function TimeSelection() {
       <ul className="flex flex-col gap-2 w-61  overflow-y-auto scrollbar-hide">
         {selectOptions.map((opt) => {
           const isSelected = selectedTime?.value === opt.value;
-
           return (
             <li
               key={opt.value}
-              onClick={() =>
-                isSelected ? setSelectedTime(null) : setSelectedTime(opt)
-              }
+              onClick={() => {
+                if (isSelected) {
+                  dispatch(setSelectedTimeAction(opt.value));
+                } else {
+                  dispatch(setSelectedTimeAction(null));
+                }
+                return isSelected
+                  ? setSelectedTime(null)
+                  : setSelectedTime(opt);
+              }}
               className={`
                 cursor-pointer border-2 border-[#fabf42] rounded-lg py-2 px-6 w-59 h-10 flex flex-col items-center justify-center gap-2.5
                 ${isSelected ? "bg-[#fabf42] text-[#0c0614]" : "bg-transparent text-[#d18e1b]"}

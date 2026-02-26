@@ -1,5 +1,7 @@
-import { useState } from "react";
 import { DayPicker, useDayPicker } from "react-day-picker";
+import { useDispatch, useSelector } from "react-redux";
+import { getSelectedDateSelector } from "../../redux/date/selectors";
+import { setSelectedDate } from "../../redux/date/slice";
 
 function CustomNav() {
   const { goToMonth, previousMonth, nextMonth, months } = useDayPicker();
@@ -61,15 +63,19 @@ function CustomNav() {
 }
 
 export default function DatePickerComponent() {
-  const [selected, setSelected] = useState();
+  const dispatch = useDispatch();
+  const selectedDate = useSelector(getSelectedDateSelector);
+
   const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return (
     <DayPicker
       className="bg-transparent"
       mode="single"
       weekStartsOn={1}
-      selected={selected}
-      onSelect={setSelected}
+      selected={selectedDate}
+      onSelect={(date) => {
+        dispatch(setSelectedDate(date ? date.toISOString() : null));
+      }}
       disabled={[{ dayOfWeek: [0, 6] }, { before: new Date() }]}
       formatters={{
         formatWeekdayName: (date) => weekdays[date.getDay()],

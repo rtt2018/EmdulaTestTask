@@ -1,6 +1,9 @@
 import { useTimezoneSelect, allTimezones } from "react-timezone-select";
 import Select, { components as NativeComponents } from "react-select";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getTimeZone } from "../../redux/time/selectors";
+import { setTimeZone } from "../../redux/time/slice";
 
 const customStyles = {
   control: (provided) => ({
@@ -92,18 +95,21 @@ const DropdownIndicator = (props) => {
 };
 
 export default function TimeZoneComponent() {
+  const dispatch = useDispatch();
+
   const labelStyle = "original";
+
   const { options, parseTimezone } = useTimezoneSelect({
     labelStyle,
     allTimezones,
   });
+
+  const memberTimezone = parseTimezone(useSelector(getTimeZone));
+
   const [selectedTimezone, setSelectedTimezone] = useState(() => ({
-    value: parseTimezone(Intl.DateTimeFormat().resolvedOptions().timeZone)
-      .value,
-    label: parseTimezone(Intl.DateTimeFormat().resolvedOptions().timeZone)
-      .label,
-    showLabel: parseTimezone(Intl.DateTimeFormat().resolvedOptions().timeZone)
-      .altName,
+    value: memberTimezone.value,
+    label: memberTimezone.label,
+    showLabel: memberTimezone.altName,
   }));
 
   const selectOptions = options.map((opt) => ({
@@ -136,7 +142,10 @@ export default function TimeZoneComponent() {
             showLabel: selectedTimezone.label,
           }}
           options={selectOptions}
-          onChange={(opt) => setSelectedTimezone(opt)}
+          onChange={async (opt) => {
+            setSelectedTimezone(opt);
+            dispatch(setTimeZone(opt.value));
+          }}
           components={{
             IndicatorSeparator: () => null,
             DropdownIndicator,
