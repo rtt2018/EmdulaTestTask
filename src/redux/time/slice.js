@@ -35,10 +35,14 @@ export const timeSlice = createSlice({
   name: "time",
   initialState: initTimeSlice,
   reducers: {
-    setSelectedTime: (state, actions) => {},
+    setSelectedTime: (state, actions) => {
+      if (actions.payload) {
+        state.selectedTime = actions.payload;
+      }
+    },
   },
 });
 
 export const { setSelectedTime } = timeSlice.actions;
 
-export default timeSlice.reducer;
+export const timeSliceReducer = timeSlice.reducer;

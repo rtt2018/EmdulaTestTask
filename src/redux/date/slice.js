@@ -22,4 +22,4 @@ export const dateSlice = createSlice({
 
 export const { setSelectedDate } = dateSlice.actions;
 
-export default dateSlice.reducer;
+export const dateSliceReducer = dateSlice.reducer;

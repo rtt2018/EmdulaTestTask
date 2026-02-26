@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { getTimePeriods } from "../../redux/selectors";
 import { useSelector } from "react-redux";
+import { getTimePeriods } from "../../redux/time/selectors";
 
 export default function TimeSelection() {
   const [selectedTime, setSelectedTime] = useState(null);
-  console.log("🚀 ~ TimeSelection ~ selectedTime:", selectedTime);
   const disableButton = !selectedTime;
   const selectOptions = useSelector(getTimePeriods);
 
