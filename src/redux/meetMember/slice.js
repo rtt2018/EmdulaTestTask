@@ -1,6 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initMemberSlice = {};
+const initMemberSlice = {
+  name: "",
+  email: "",
+  guest: [],
+  comments: "",
+  isSheduleCreated: false,
+  shedule: [],
+};
 
 export const memberSlice = createSlice({
   name: "date",
