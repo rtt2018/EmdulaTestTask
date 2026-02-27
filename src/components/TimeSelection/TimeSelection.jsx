@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getTimePeriods } from "../../redux/time/selectors";
-import { setSelectedTimeAction } from "../../redux/time/slice";
+import {
+  setIsTimeSelectedAction,
+  setSelectedTimeAction,
+} from "../../redux/time/slice";
 import { getSelectedDateSelector } from "../../redux/date/selectors";
 
 export default function TimeSelection() {
@@ -17,11 +20,14 @@ export default function TimeSelection() {
   });
 
   return (
-    <div className="flex flex-col gap-6 p-2 h-132.5 border-l-[0.7px] border-l-[rgba(253,252,252,0.25)]">
+    <div className="flex flex-col gap-6 p-2 h-132.5 border-l-[0.7px] border-l-[rgba(253,252,252,0.25)] relative">
       <div className="font-inter font-normal text-base leading-normal text-white/50">
         {formatted}
       </div>
-      <ul className="flex flex-col gap-2 w-61  overflow-y-auto scrollbar-hide">
+      <ul
+        className="flex flex-col gap-2 w-61 h-[470px] overflow-y-auto scrollbar-hide bg-[linear-gradient(180deg,rgba(22,18,29,0)_0%,#16121d_100%)]
+        bg-no-repeat bg-[length:100%_236px] bg-bottom"
+      >
         {selectOptions.map((opt) => {
           const isSelected = selectedTime?.value === opt.value;
           return (
@@ -29,9 +35,9 @@ export default function TimeSelection() {
               key={opt.value}
               onClick={() => {
                 if (isSelected) {
-                  dispatch(setSelectedTimeAction(opt.value));
-                } else {
                   dispatch(setSelectedTimeAction(null));
+                } else {
+                  dispatch(setSelectedTimeAction(opt.value));
                 }
                 return isSelected
                   ? setSelectedTime(null)
@@ -51,9 +57,9 @@ export default function TimeSelection() {
         disabled={disableButton}
         type="button"
         onClick={() => {
-          console.log("click");
+          dispatch(setIsTimeSelectedAction(true));
         }}
-        className="flex items-center justify-center flex-row gap-2 rounded-[100px] px-12 py-4 w-61 h-14 bg-[#e9ac32]
+        className="absolute bottom-0 flex items-center justify-center flex-row gap-2 rounded-[100px] px-12 py-4 w-61 h-14 bg-[#e9ac32]
       hover:bg-[#d18e1b] active:bg-[#a86415] active:shadow-[inset_5px_6px_4px_rgba(12,17,31,0.3)] transition-colors duration-200
         font-inter font-medium text-lg leading-[1.55556] text-[#0c0614] disabled:bg-[#8f8c84] disabled:text-[#252422]"
       >

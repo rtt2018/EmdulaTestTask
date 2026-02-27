@@ -38,18 +38,20 @@ export const timeSlice = createSlice({
     setSelectedTimeAction: (state, actions) => {
       if (actions.payload) {
         state.selectedTime = actions.payload;
-        state.isTimeSelected = true;
       } else {
         state.selectedTime = null;
-        state.isTimeSelected = false;
       }
     },
     setTimeZone: (state, actions) => {
       state.timeZone = actions.payload;
     },
+    setIsTimeSelectedAction: (state, actions) => {
+      state.isTimeSelected = actions.payload;
+    },
   },
 });
 
-export const { setSelectedTimeAction, setTimeZone } = timeSlice.actions;
+export const { setSelectedTimeAction, setTimeZone, setIsTimeSelectedAction } =
+  timeSlice.actions;
 
 export const timeSliceReducer = timeSlice.reducer;
