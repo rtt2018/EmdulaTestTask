@@ -1,8 +1,8 @@
 import DatePickerComponent from "../DatePickerComponent/DatePickerComponent";
 import TimeZoneComponent from "../TimeZoneComponent/TimeZoneComponent";
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
+import CookieSettings from "../CookieSettings/CookieSettings";
 
-const notify = () => toast("Here will be the Cookie settings");
 export default function Calendar() {
   return (
     <div className="flex flex-col items-center justify-start gap-8 w-88 gap-8">
@@ -13,12 +13,7 @@ export default function Calendar() {
         <DatePickerComponent />
         <TimeZoneComponent />
       </div>
-      <button
-        className="font-medium text-sm leading-[1.28571] text-[#e9ac32] font-inter"
-        onClick={notify}
-      >
-        Cookie settings
-      </button>
+      <CookieSettings />
       <Toaster />
     </div>
   );

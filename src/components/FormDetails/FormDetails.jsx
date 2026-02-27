@@ -1,3 +1,3 @@
 export default function FormDetails() {
-  return <div className="">FormDetails works!</div>;
+  return <div className=""></div>;
 }
