@@ -25,8 +25,8 @@ export default function TimeSelection() {
         {formatted}
       </div>
       <ul
-        className="flex flex-col gap-2 w-61 h-[470px] overflow-y-auto scrollbar-hide bg-[linear-gradient(180deg,rgba(22,18,29,0)_0%,#16121d_100%)]
-        bg-no-repeat bg-[length:100%_236px] bg-bottom"
+        className="flex flex-col gap-2 w-61 h-117.5 overflow-y-auto scrollbar-hide bg-[linear-gradient(180deg,rgba(22,18,29,0)_0%,#16121d_100%)]
+        bg-no-repeat bg-size-[100%_236px] bg-bottom"
       >
         {selectOptions.map((opt) => {
           const isSelected = selectedTime?.value === opt.value;

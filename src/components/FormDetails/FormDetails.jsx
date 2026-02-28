@@ -96,7 +96,7 @@ export default function FormDetails() {
             font-inter font-medium text-[14px] leading-[1.28571] text-[#0c0614]
             flex flex-row items-center justify-center gap-2
             rounded-[100px] py-3 px-4
-            w-[140px] h-[42px]
+            w-35 h-10.5
           bg-[#e9ac32] hover:bg-[#d18e1b]
           active:bg-[#a86415] active:shadow-[inset_5px_6px_4px_rgba(12,17,31,0.3)]
           transition-all duration-200 ease-in-out"
