@@ -3,27 +3,23 @@ import { createSlice } from "@reduxjs/toolkit";
 const initMemberSlice = {
   name: "",
   email: "",
-  guest: [],
+  guest: "",
   comments: "",
   isSheduleCreated: false,
-  shedule: [],
+  shedule: "",
 };
 
 export const memberSlice = createSlice({
   name: "date",
   initialState: initMemberSlice,
   reducers: {
-    setMemberData: (state, actions) => {
-      if (actions.payload) {
-        state.selectedDate = actions.payload;
-        state.isDateSelected = true;
-      } else {
-        state = initMemberSlice;
-      }
+    setMemberDataAction: (state, actions) => {
+      Object.assign(state, actions.payload);
+      state.isSheduleCreated = true;
     },
   },
 });
 
-export const { setMemberData } = memberSlice.actions;
+export const { setMemberDataAction } = memberSlice.actions;
 
 export const memberSliceReducer = memberSlice.reducer;

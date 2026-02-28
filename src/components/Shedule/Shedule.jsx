@@ -5,21 +5,26 @@ import FormDetails from "../FormDetails/FormDetails";
 import { useSelector } from "react-redux";
 import { getIsSlectedDateSelector } from "../../redux/date/selectors";
 import { getIsTimeSelected } from "../../redux/time/selectors";
+import { Toaster } from "react-hot-toast";
+import { selectIsSheduleCreated } from "../../redux/meetMember/selectors";
+import SheduleDetail from "../SheduleDetail/SheduleDetail";
 
 export default function Shedule() {
   const isDateSelected = useSelector(getIsSlectedDateSelector);
   const isTimeSelectionDone = useSelector(getIsTimeSelected);
-
+  const isSheduleCreated = useSelector(selectIsSheduleCreated);
   return (
     <div className="bg-[#17121d] border border-[rgba(253,252,252,0.25)] rounded-2xl w-175">
-      <Head />
+      {!isSheduleCreated && <Head />}
       {!isTimeSelectionDone && (
         <div className="flex p-7 border-t border-white/25 gap-2 justify-center">
           <Calendar />
           {isDateSelected && <TimeSelection />}
         </div>
       )}
-      {isTimeSelectionDone && <FormDetails />}
+      {isTimeSelectionDone && !isSheduleCreated && <FormDetails />}
+      {isSheduleCreated && <SheduleDetail />}
+      <Toaster />
     </div>
   );
 }
