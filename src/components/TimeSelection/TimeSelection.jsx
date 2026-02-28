@@ -45,7 +45,9 @@ export default function TimeSelection() {
               }}
               className={`
                 cursor-pointer border-2 border-[#fabf42] rounded-lg py-2 px-6 w-59 h-10 flex flex-col items-center justify-center gap-2.5
-                ${isSelected ? "bg-[#fabf42] text-[#0c0614]" : "bg-transparent text-[#d18e1b]"}
+                hover:border-[2px_2px_2px_2px_#d18e1b] hover:text-[#d18e1b]
+                active:border-[2px_solid_rgba(177,96,9,0.2)] active:text-[#a86415]
+                ${isSelected ? "bg-[#fabf42] text-[#0c0614] " : "bg-transparent text-[#d18e1b] hover:border-[2px_2px_2px_2px_#d18e1b] hover:text-[#d18e1b] active:border-[2px_solid_rgba(177,96,9,0.2)] active:text-[#a86415]"}
             `}
             >
               {opt.label}
