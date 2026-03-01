@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initTimeSlice = {
   timeIntervals: [
-    { label: "8:00", value: "8:00 - 8:30" },
-    { label: "8:30", value: "8:30 - 9:00" },
-    { label: "9:00", value: "9:00 - 9:30" },
-    { label: "9:30", value: "9:30 - 10:00" },
+    { label: "08:00", value: "08:00 - 08:30" },
+    { label: "08:30", value: "08:30 - 09:00" },
+    { label: "09:00", value: "09:00 - 09:30" },
+    { label: "09:30", value: "09:30 - 10:00" },
     { label: "10:00", value: "10:00 - 10:30" },
     { label: "10:30", value: "10:30 - 11:00" },
     { label: "11:00", value: "11:00 - 11:30" },
